@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
+import 'package:flutter_study/cupertino.dart';
 import 'package:flutter_study/new_route.dart';
 import 'package:flutter_study/new_route2.dart';
 import 'package:flutter_study/new_route3.dart';
+import 'package:flutter_study/text.dart';
 
 void main() => runApp(new MyApp());
 
@@ -19,6 +21,8 @@ class MyApp extends StatelessWidget {
         'new_page': (context) => NewRoute(),
         'new_page2': (context) => ParentWidget(),
         'new_page3': (context) => ParentWidgetC(),
+        'new_page4': (context) => CupertinoTestRoute(),
+        'new_page5': (context) => TextExample(),
       },
     );
   }
@@ -94,6 +98,20 @@ class _MyHomePageState extends State<MyHomePage> {
               textColor: Colors.blue,
               onPressed: () {
                 Navigator.pushNamed(context, 'new_page3');
+              },
+            ),
+            FlatButton(
+              child: Text('ios动画'),
+              textColor: Colors.blue,
+              onPressed: () {
+                Navigator.pushNamed(context, 'new_page4');
+              },
+            ),
+            FlatButton(
+              child: Text('Text示例'),
+              textColor: Colors.blue,
+              onPressed: () {
+                Navigator.pushNamed(context, 'new_page5');
               },
             ),
             RandomWordsWidget()
