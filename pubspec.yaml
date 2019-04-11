@@ -23,6 +23,12 @@ flutter:
   uses-material-design: true
 
   fonts:
-  - family: Raleway
+  - family: ZK
     fonts:
     - asset: assets/fonts/ZK.ttf
+  - family: myIcon
+    fonts:
+    - asset: assets/fonts/iconfont.ttf
+
+  assets:
+    - images/avatar.jpg

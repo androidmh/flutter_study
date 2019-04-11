@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 
 const textStyle = const TextStyle(
-  fontFamily: 'Raleway',
+  fontFamily: 'ZK',
   fontSize: 25,
 );
 
@@ -11,10 +11,11 @@ class TextExample extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('文本样例'),
+        title: Text('Text示例'),
       ),
       body: Center(
         child: new Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             Text(
               "文本居中文本" * 6,

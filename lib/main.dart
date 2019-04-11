@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
+import 'package:flutter_study/button.dart';
+import 'package:flutter_study/check.dart';
 import 'package:flutter_study/cupertino.dart';
+import 'package:flutter_study/image.dart';
 import 'package:flutter_study/new_route.dart';
 import 'package:flutter_study/new_route2.dart';
 import 'package:flutter_study/new_route3.dart';
@@ -23,6 +26,9 @@ class MyApp extends StatelessWidget {
         'new_page3': (context) => ParentWidgetC(),
         'new_page4': (context) => CupertinoTestRoute(),
         'new_page5': (context) => TextExample(),
+        'new_page6': (context) => ButtonExample(),
+        'new_page7': (context) => ImageExample(),
+        'new_page8': (context) => CBAndSwitchExample(),
       },
     );
   }
@@ -68,6 +74,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: new Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            RandomWordsWidget(),
             new Text(
               'You have pushed the button this many times:',
             ),
@@ -114,7 +121,27 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.pushNamed(context, 'new_page5');
               },
             ),
-            RandomWordsWidget()
+            FlatButton(
+              child: Text('Button示例'),
+              textColor: Colors.blue,
+              onPressed: () {
+                Navigator.pushNamed(context, 'new_page6');
+              },
+            ),
+            FlatButton(
+              child: Text('Image示例'),
+              textColor: Colors.blue,
+              onPressed: () {
+                Navigator.pushNamed(context, 'new_page7');
+              },
+            ),
+            FlatButton(
+              child: Text('单选开关和复选框'),
+              textColor: Colors.blue,
+              onPressed: () {
+                Navigator.pushNamed(context, 'new_page8');
+              },
+            ),
           ],
         ),
       ),
