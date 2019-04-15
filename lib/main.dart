@@ -3,6 +3,7 @@ import 'package:english_words/english_words.dart';
 import 'package:flutter_study/button.dart';
 import 'package:flutter_study/check.dart';
 import 'package:flutter_study/cupertino.dart';
+import 'package:flutter_study/flex.dart';
 import 'package:flutter_study/form.dart';
 import 'package:flutter_study/form2.dart';
 import 'package:flutter_study/form3.dart';
@@ -35,6 +36,7 @@ class MyApp extends StatelessWidget {
         'new_page9': (context) => FormExample(),
         'new_page10': (context) => Form2Example(),
         'new_page11': (context) => Form2Example3(),
+        'new_page12': (context) => FlexLayoutTestRoute(),
       },
     );
   }
@@ -167,6 +169,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 textColor: Colors.blue,
                 onPressed: () {
                   Navigator.pushNamed(context, 'new_page11');
+                },
+              ),
+              FlatButton(
+                child: Text('Flex和Expanded'),
+                textColor: Colors.blue,
+                onPressed: () {
+                  Navigator.pushNamed(context, 'new_page12');
                 },
               ),
             ],
