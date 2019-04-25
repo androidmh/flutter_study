@@ -11,7 +11,10 @@ import 'package:flutter_study/image.dart';
 import 'package:flutter_study/new_route.dart';
 import 'package:flutter_study/new_route2.dart';
 import 'package:flutter_study/new_route3.dart';
+import 'package:flutter_study/padding.dart';
+import 'package:flutter_study/stack.dart';
 import 'package:flutter_study/text.dart';
+import 'package:flutter_study/wrap.dart';
 
 void main() => runApp(new MyApp());
 
@@ -37,6 +40,9 @@ class MyApp extends StatelessWidget {
         'new_page10': (context) => Form2Example(),
         'new_page11': (context) => Form2Example3(),
         'new_page12': (context) => FlexLayoutTestRoute(),
+        'new_page13': (context) => WrapAndFlow(),
+        'new_page14': (context) => StackPage(),
+        'new_page15': (context) => PaddingTestRoute(),
       },
     );
   }
@@ -176,6 +182,27 @@ class _MyHomePageState extends State<MyHomePage> {
                 textColor: Colors.blue,
                 onPressed: () {
                   Navigator.pushNamed(context, 'new_page12');
+                },
+              ),
+              FlatButton(
+                child: Text('Wrap和Flow'),
+                textColor: Colors.blue,
+                onPressed: () {
+                  Navigator.pushNamed(context, 'new_page13');
+                },
+              ),
+              FlatButton(
+                child: Text('Stack'),
+                textColor: Colors.blue,
+                onPressed: () {
+                  Navigator.pushNamed(context, 'new_page14');
+                },
+              ),
+              FlatButton(
+                child: Text('Padding'),
+                textColor: Colors.blue,
+                onPressed: () {
+                  Navigator.pushNamed(context, 'new_page15');
                 },
               ),
             ],
