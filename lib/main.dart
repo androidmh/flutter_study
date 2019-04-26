@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
 import 'package:flutter_study/button.dart';
 import 'package:flutter_study/check.dart';
+import 'package:flutter_study/constrained_box.dart';
 import 'package:flutter_study/cupertino.dart';
 import 'package:flutter_study/flex.dart';
 import 'package:flutter_study/form.dart';
@@ -43,6 +44,7 @@ class MyApp extends StatelessWidget {
         'new_page13': (context) => WrapAndFlow(),
         'new_page14': (context) => StackPage(),
         'new_page15': (context) => PaddingTestRoute(),
+        'new_page16': (context) => ConstrainedBoxRoute(),
       },
     );
   }
@@ -203,6 +205,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 textColor: Colors.blue,
                 onPressed: () {
                   Navigator.pushNamed(context, 'new_page15');
+                },
+              ),
+              FlatButton(
+                child: Text('ConstrainedBox'),
+                textColor: Colors.blue,
+                onPressed: () {
+                  Navigator.pushNamed(context, 'new_page16');
                 },
               ),
             ],
